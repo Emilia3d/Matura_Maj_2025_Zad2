@@ -19,8 +19,4 @@
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\Documents\MATURA\informatyka-2025-maj-matura-rozszerzona-zalaczniki\dane maj 23\symbole.txt" />
-    <Text Include="..\..\..\..\Documents\MATURA\informatyka-2025-maj-matura-rozszerzona-zalaczniki\dane maj 23\symbole_przyklad.txt" />
-  </ItemGroup>
 </Project>

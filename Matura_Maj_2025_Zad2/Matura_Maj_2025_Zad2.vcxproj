@@ -125,10 +125,6 @@
   <ItemGroup>
     <ClCompile Include="Matura_Maj_2025_Zad2.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\..\..\..\Documents\MATURA\informatyka-2025-maj-matura-rozszerzona-zalaczniki\dane maj 23\symbole.txt" />
-    <Text Include="..\..\..\..\Documents\MATURA\informatyka-2025-maj-matura-rozszerzona-zalaczniki\dane maj 23\symbole_przyklad.txt" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
