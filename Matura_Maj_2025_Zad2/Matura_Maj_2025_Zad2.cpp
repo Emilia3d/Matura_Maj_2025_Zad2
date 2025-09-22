@@ -15,12 +15,13 @@ bool czyPalindrom(string s) {
 }
 
 void Zadanie2_1() {
+    cout << "Zad 2.1 " << endl;
     ifstream fin("symbole.txt");
 
     string linia;
     while (getline(fin, linia)) {
         if (czyPalindrom(linia)) {
-            cout <<"Zad 2.1 "<< linia << "\n";
+            cout << linia << "\n";
         }
     }
     fin.close();
@@ -46,6 +47,7 @@ void WczytajTablice()
 }
 void Zadanie2_2()
 {
+    cout << "Zad 2.2 " << endl;
     WczytajTablice();
     int licznik = 0;
     for (int i = 0; i < MAXN; ++i) {
@@ -55,15 +57,15 @@ void Zadanie2_2()
                 c == A[i][j - 1]    && c == A[i][j + 1] &&
                 c == A[i + 1][j - 1] && c == A[i + 1][j] && c == A[i + 1][j + 1])
             {
-                cout << "Zad 2.2 " << (i + 1) << ' ' << (j + 1) << ' ' << c << '\n';
+                cout << (i + 1) << ' ' << (j + 1) << ' ' << c << '\n';
                 ++licznik;
             }
         }
     }
-    cout << "Zad 2.2 " << licznik << "\n";
+    cout << "ile kwadratow:"<<licznik << endl;
 }
-void Zadanie2_3()
-{
+void Zadanie2_3() {
+    cout << "Zad 2.3 " << endl;
     long long max = 0;
     for (int i = 0; i < MAXN; ++i) {
         long long liczba = 0;
@@ -77,11 +79,20 @@ void Zadanie2_3()
         }
         if (liczba > max) max = liczba;
     }
-    cout << "Zad 2.3 " << max << "\n";
+    cout  << max << "\n";
+    string wynik = "";
+    while (max)
+    {
+        int cyfra = max % 3;
+        if (cyfra == 0) wynik = 'o' + wynik;
+        if (cyfra == 1) wynik = '+' + wynik;
+        if (cyfra == 2) wynik = '*' + wynik;
+        max /= 3;
+    }
+    cout << wynik << endl;
 }
 void Zadanie2_4() {
-    cout << "zadanie 2.3\n";
-
+    cout << "Zad 2.4 " << endl;
     long long suma = 0;
     for (int i = 0; i < MAXN; ++i) {
         long long liczba = 0;
@@ -95,7 +106,8 @@ void Zadanie2_4() {
         }
         suma = suma + liczba;
     }
-    cout << "Zad 2.4 " << suma << endl;
+    cout  << suma << endl;
+
     string wynik = "";
     while (suma)
     {
@@ -105,7 +117,7 @@ void Zadanie2_4() {
         if (cyfra == 2) wynik = '*' + wynik;
         suma /= 3;
     }
-    cout << "Zad 2.4 " << wynik << endl;
+    cout << wynik << endl;
 }
 
 int main() {
