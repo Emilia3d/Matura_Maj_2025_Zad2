@@ -64,28 +64,49 @@ void Zadanie2_2()
 }
 void Zadanie2_3()
 {
-    cout << "zadanie 2.3\n";
-
     long long max = 0;
-    for (int i = 0; i < MAXN; ++i)
-    {
+    for (int i = 0; i < MAXN; ++i) {
         long long liczba = 0;
-        for (int j = 0; j < MAXM; ++j)
-        {
+        for (int j = 0; j < MAXM; ++j) {
             int cyfra;
             char znak = A[i][j];
             if (znak == 'o') cyfra = 0;
             if (znak == '+') cyfra = 1;
             if (znak == '*') cyfra = 2;
             liczba = liczba * 3 + cyfra;
-            
         }
         if (liczba > max) max = liczba;
     }
-
     cout << "Zad 2.3 " << max << "\n";
 }
+void Zadanie2_4() {
+    cout << "zadanie 2.3\n";
 
+    long long suma = 0;
+    for (int i = 0; i < MAXN; ++i) {
+        long long liczba = 0;
+        for (int j = 0; j < MAXM; ++j) {
+            int cyfra;
+            char znak = A[i][j];
+            if (znak == 'o') cyfra = 0;
+            if (znak == '+') cyfra = 1;
+            if (znak == '*') cyfra = 2;
+            liczba = liczba * 3 + cyfra;
+        }
+        suma = suma + liczba;
+    }
+    cout << "Zad 2.4 " << suma << endl;
+    string wynik = "";
+    while (suma)
+    {
+        int cyfra = suma % 3;
+        if (cyfra == 0) wynik = 'o' + wynik;
+        if (cyfra == 1) wynik = '+' + wynik;
+        if (cyfra == 2) wynik = '*' + wynik;
+        suma /= 3;
+    }
+    cout << "Zad 2.4 " << wynik << endl;
+}
 
 int main() {
     int licznik = 0;
@@ -93,6 +114,7 @@ int main() {
     Zadanie2_1();    
     Zadanie2_2();
     Zadanie2_3();
+    Zadanie2_4();
 
     return 0;
 }
