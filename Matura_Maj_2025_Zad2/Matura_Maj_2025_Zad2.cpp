@@ -2,8 +2,6 @@
 #include <fstream>
 #include <string>
 
-
-
 using namespace std;
 
 //Zad. 2.1
@@ -62,14 +60,13 @@ void Zadanie2_2()
             }
         }
     }
-    cout << licznik;
+    cout << "Zad 2.2 " << licznik << "\n";
 }
-void zad_2_3()
+void Zadanie2_3()
 {
     cout << "zadanie 2.3\n";
-    long long Max = 0;
-    string str_Max;
 
+    long long max = 0;
     for (int i = 0; i < MAXN; ++i)
     {
         long long liczba = 0;
@@ -81,14 +78,12 @@ void zad_2_3()
             if (znak == '+') cyfra = 1;
             if (znak == '*') cyfra = 2;
             liczba = liczba * 3 + cyfra;
+            
         }
-        if (Max < liczba)
-        {
-            Max = liczba;
-            str_Max.assign(&A[i][0], &A[i][0] + MAXM); // zbuduj napis z wiersza
-        }
+        if (liczba > max) max = liczba;
     }
-    cout << Max << ' ' << str_Max << '\n';
+
+    cout << "Zad 2.3 " << max << "\n";
 }
 
 
@@ -97,6 +92,7 @@ int main() {
 
     Zadanie2_1();    
     Zadanie2_2();
+    Zadanie2_3();
 
     return 0;
 }
